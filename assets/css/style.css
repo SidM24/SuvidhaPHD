@@ -126,7 +126,7 @@ h6 {
 }
 
 @media (max-width:380px) {
-  #topbar{
+  #topbar {
     font-size: 12px;
   }
 }
@@ -372,15 +372,16 @@ h6 {
 /* CSS for the services dropdown */
 #service_dropdown_container {
   margin: auto;
-  width: 60vw;
+  width: 100%;
   background-color: rgba(11, 11, 11, 0.85);
   color: white;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   justify-content: space-around;
   align-items: start;
-  overflow: scroll;
-  max-height: 75vh; 
+  white-space: normal;
+  overflow-wrap: break-word;
+  max-height: 75vh;
   padding: 10px;
   column-gap: 5px;
   row-gap: 10px;
@@ -420,6 +421,7 @@ h6 {
     flex-wrap: wrap;
     min-width: 90vw;
     justify-content: flex-start;
+    overflow: scroll;
   }
 
   #service_dropdown_container li {
@@ -430,6 +432,7 @@ h6 {
 @media (min-width:320px) and (max-width:500px) {
   #service_dropdown_container {
     min-width: 80vw;
+    overflow: scroll;
   }
 }
 

@@ -472,10 +472,8 @@ h6 {
   padding: 10px;
 }
 
-.services_link_container h3 {
-  font-size: 12px;
-  font-weight: bold;
-}
+
+
 
 #services_link_container a {
   color: white;
@@ -2648,41 +2646,14 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #05579e;
+  background: #262626;
   padding: 0 0 30px 0;
   color: #fff;
   font-size: 14px;
 }
 
-#footer .footer-newsletter {
-  padding: 50px 0;
-  background: #05579e;
-}
-
-#footer .footer-newsletter h4 {
-  font-size: 24px;
-  margin: 0 0 20px 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 600;
-}
-
-#footer .footer-newsletter form {
-  margin-top: 30px;
-  background: #fff;
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 50px;
-}
-
-
-
-#footer .footer-newsletter form input[type=submit]:hover {
-  background: #0880e8;
-}
-
 #footer .footer-top {
-  background: #065fad;
+  background: #262626;
   padding: 60px 0 30px 0;
 }
 
@@ -2721,8 +2692,33 @@ section {
   transition: 0.3s;
 }
 
-#footer .footer-top .social-links a:hover {
-  background: #f6b024;
+#footer .footer-top .social-links .twitter:hover {
+  background: #1DA1F2;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-top .social-links .facebook:hover {
+  background: #3B5998;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-top .social-links .instagram:hover {
+  background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-top .social-links .google-plus:hover {
+  background: #db4a39;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-top .social-links .linkedin:hover {
+  background: #0a66c2;
   color: #fff;
   text-decoration: none;
 }
@@ -2748,7 +2744,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #5db1f9;
+  color: #b92327;
   font-size: 18px;
   line-height: 1;
 }

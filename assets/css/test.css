@@ -1,92 +1,253 @@
 .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 300px;
-    border: 1px solid #f1f1f1;
-    border-radius: 10px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #f1f1f1;
+  border-radius: 10px;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  border-radius: 10px;
+  background-color: #c31432;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  border-radius: 10px;
+  background-color: #c31432;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  transform: rotateY(180deg);
+}
+
+/* our guarantee */
+
+.our-gurantee {
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+
+.our-gurantee h1 {
+  color: #000000;
+  font-size: 34px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: normal;
+  font-family: Montserrat, sans-serif;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.our-gurantee h3 {
+  color: #323232;
+  font-size: 20px;
+  line-height: 21px;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 280px;
+}
+
+.para {
+  order: 2;
+  padding: 5px;
+  width: 50%;
+  margin: auto;
+}
+
+.para p {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: justify;
+  letter-spacing: normal;
+  color: #2d2d2d;
+}
+
+.what-we-provide-1,
+.what-we-provide-2 {
+  /* border: 2px solid; */
+  padding: 5px 10px;
+  width: 23%;
+}
+
+.what-we-provide-1 {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.what-we-provide-2 {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.inner-content {
+  display: flex;
+  align-items: center;
+}
+
+.inner-content img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.inner-content h3 {
+  color: #c12930;
+  font-size: 18px;
+  text-align: left;
+  font-weight: 700;
+}
+
+
+@media (max-width:960px) {
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
   }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-    position: relative;
+
+  .para {
+    grid-column: 1/3;
+    order: 1;
     width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
   }
   
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
+  .what-we-provide-1 {
+    padding-left: 50px;
+    grid-column: 1/2;
+    order: 2;
     width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
   }
   
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    border-radius: 10px;
-    background-color: #c31432;
-    color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    border-radius: 10px;
-    background-color: #c31432;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    transform: rotateY(180deg);
+  .what-we-provide-2 {
+    padding-right: 50px;
+    grid-column: 2/3;
+    order: 3;
+    width: 100%;
   }
 
-  /* our guarantee */
-    .main-container {
-      display: flex;
-      padding: 20px;
-      flex-wrap: wrap;
-    }
+  .inner-content{
+    margin: 5px;
+  }
+}
 
-    .para,
-    .what-we-provide-1,
-    .what-we-provide-2 {
-      padding: 10px;
-      text-align: start;
-    }
+@media (max-width:520px) {
+  .main-container{
+    display: block;
+  }
 
-    .para {
-      width: 100%;
-    }
+  .what-we-provide-1,.what-we-provide-2{
+    padding: 0px 5px;
+  }
 
-    .what-we-provide-1,
-    .what-we-provide-2 {
-      width: 100%;
-      padding-left: 0;
-    }
+  .para p{
+    font-size: 14px;
+  }
+}
 
-    @media (min-width: 768px) {
-      .main-container {
-        flex-wrap: nowrap;
-      }
+/* Sample and Example Works */
+.our-samples {
+  background-color: #fcfcfc;
+}
 
-      .para {
-        width: 50%;
-      }
+.our-samples .container {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-      .what-we-provide-1,
-      .what-we-provide-2 {
-        width: 50%;
-        padding-left: 30px;
-      }
-    }
+.our-samples h1 {
+  color: #000000;
+  font-size: 34px;
+  line-height: 34px;
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: bolder;
+  padding-bottom: 10px;
+}
+
+
+.our-samples h3 {
+  color: #323232;
+  font-size: 20px;
+  line-height: 21px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+@media (max-width:430px) {
+  .our-samples h1 {
+    font-size: 32px;
+  }
+
+  .our-samples h3 {
+    font-size: 16px;
+  }
+
+}
+
+.sample-images {
+  width: 100%;
+}
+
+.sample-images img {
+  object-fit: contain;
+  width: 100%;
+}
+
+/* If viewing of mobile remove the bg.svg image */
+@media (max-width:650px) {
+  .sample-images {
+    display: none;
+  }
+
+}

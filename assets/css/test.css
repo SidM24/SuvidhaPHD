@@ -158,14 +158,14 @@
     order: 1;
     width: 100%;
   }
-  
+
   .what-we-provide-1 {
     padding-left: 50px;
     grid-column: 1/2;
     order: 2;
     width: 100%;
   }
-  
+
   .what-we-provide-2 {
     padding-right: 50px;
     grid-column: 2/3;
@@ -173,21 +173,22 @@
     width: 100%;
   }
 
-  .inner-content{
+  .inner-content {
     margin: 5px;
   }
 }
 
 @media (max-width:520px) {
-  .main-container{
+  .main-container {
     display: block;
   }
 
-  .what-we-provide-1,.what-we-provide-2{
+  .what-we-provide-1,
+  .what-we-provide-2 {
     padding: 0px 5px;
   }
 
-  .para p{
+  .para p {
     font-size: 14px;
   }
 }
@@ -250,4 +251,112 @@
     display: none;
   }
 
+}
+
+/* Work Sampels CSS */
+
+.samples_container {
+  margin: 10px;
+  padding: 10px 40px;
+}
+
+.work-samples {
+  min-height: 300px;
+  margin: 40px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  overflow: hidden;
+  width: 33%;
+  margin: 10px;
+  border-radius: 20px !important;
+  padding: 10px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  max-height: 350px;
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+  /* border: 2px solid; */
+  transition: all ease-in-out 0.5s;
+}
+
+.card-body {
+  border-radius: 10px;
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -10px;
+  z-index: 3;
+  transition: all ease-in-out 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.work-samples .card:hover img {
+  top: 40%;
+}
+
+.work-samples .card:hover .card-body {
+  opacity: 1;
+  bottom: 0px;
+}
+
+.card-body h5 {
+  text-align: center;
+  font-weight: 600;
+  color: #f63333;
+}
+
+.card-body p {
+  text-align: justify;
+  color: rgb(206, 206, 206);
+}
+
+/* For Tablets */
+
+@media (max-width:770px) {
+  .samples_container {
+    padding: 10px 20px;
+  }
+
+  .card {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .card img {
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .card-body {
+    padding: 8px !important;
+    opacity: 1;
+    position: static;
+    background-color: transparent;
+  }
+
+  .card-body p {
+    color: gray;
+  }
+}
+
+@media (max-width:670px) {
+  .work-samples{
+    flex-direction: column;
+  }
+  .card{
+    width: 100%;
+  }
+
+  .card-body{
+    padding: 10px !important;
+  }
 }

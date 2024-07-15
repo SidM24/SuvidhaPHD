@@ -1,0 +1,95 @@
+#publishes {
+    background-color: #eaeaea;
+    padding-bottom: 50px;
+}
+
+.publishesHeading h3 {
+    text-align: center;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+.books-published {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px;
+}
+
+.book {
+    margin: 30px 10px;
+    display: flex;
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.book-image {
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.book-image img {
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    animation: MoveUpDown 2.5s linear infinite;
+    box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.9);
+
+}
+
+@keyframes MoveUpDown {
+
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 30px;
+    }
+}
+
+.publish-details {
+    z-index: 5;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    width: 55%;
+}
+
+@media (max-width:375px) {
+    .publish-details {
+        padding-top: 20px;
+    }
+}
+
+.publish-details h5 {
+    line-height: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.publish-details p {
+    color: white;
+    padding: 0px;
+}
+
+.podium {
+    background-color: grey;
+    height: 50px;
+    border-radius: 8px;
+    width: 192%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}

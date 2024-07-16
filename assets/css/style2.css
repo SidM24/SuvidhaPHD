@@ -39,7 +39,7 @@
   max-width: 400px;
   width: 30%;
   padding: 20px;
-  background-color: #ffb422b3;
+  background-color: rgb(217 210 62 / 73%);
 }
 
 .flip-card:hover {
@@ -101,7 +101,7 @@
     align-items: center;
   }
 
-  .flip-card{
+  .flip-card {
     width: 100%;
     margin: 10px 0px;
   }
@@ -366,7 +366,7 @@
 .card-body h5 {
   text-align: center;
   font-weight: 600;
-  color: #f63333;
+  color: #e69309;
 }
 
 .card-body p {

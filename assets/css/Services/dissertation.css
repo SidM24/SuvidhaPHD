@@ -1,3 +1,20 @@
+/* Common css for the left and right boxes */
+.leftBox,
+.rightBox {
+    width: 50%;
+}
+
+.data-container,
+.long-info-container,
+.articulate-container,
+.images-container,
+.values-container,
+.addFeat-container {
+    display: flex;
+}
+
+
+/* intro section */
 #intro-section {
     width: 100%;
     height: 100vh;
@@ -163,7 +180,84 @@
 }
 
 @media (max-width:430px) {
-    #why-this-service{
+    #why-this-service {
         padding: 30px 5px;
     }
+}
+
+/* Long info section */
+
+
+
+
+/* How we plan our reseach */
+
+#how-we-plan {
+    background-color: beige;
+}
+
+.how-we-plan .button {
+    display: flex;
+    justify-content: center;
+}
+
+/* How we articulate section */
+
+
+
+.articulate-container .leftBox img {
+    width: 100%;
+}
+
+/* areas we cover css */
+.areas-container {
+    display: flex;
+}
+
+/* our process*/
+#our-process {
+    background-color: beige;
+}
+
+.our-process .button {
+    display: flex;
+    justify-content: center;
+}
+
+/* sub services container */
+.subservicesContainer {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.sub-service-box {
+    width: 50%;
+}
+
+/* data section */
+
+.data-container img {
+    width: 100%;
+}
+
+/* images section */
+
+/* values section */
+
+.values-container {
+    flex-flow: wrap;
+}
+
+.value-box {
+    width: 32%;
+}
+
+/* additional features */
+
+.addFeat-container {
+    flex-wrap: wrap;
+}
+
+.addFeat-container .box {
+    width: 32%;
 }

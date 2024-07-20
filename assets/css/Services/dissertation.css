@@ -1,16 +1,70 @@
 /* Common css for the left and right boxes */
+section {
+    padding: 30px 0px !important; 
+}
+
 .leftBox,
 .rightBox {
-    width: 50%;
+    width: 49%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:770px) {
+
+    .leftBox,
+    .rightBox {
+        width: 95%;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .data-container,
+    .long-info-container,
+    .articulate-container,
+    .areas-container,
+    .images-container,
+    .values-container,
+    .addFeat-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .data-container,
 .long-info-container,
 .articulate-container,
+.areas-container,
 .images-container,
 .values-container,
 .addFeat-container {
     display: flex;
+    justify-content: space-around;
+}
+
+#why-this-service,
+#how-we-plan,
+#our-process {
+    padding: 20px 50px;
+    background-color: beige;
+}
+
+
+
+
+@media (max-width:430px) {
+
+    #why-this-service,
+    #how-we-plan,
+    #our-process {
+        padding: 30px 5px;
+    }
 }
 
 
@@ -18,7 +72,6 @@
 #intro-section {
     width: 100%;
     height: 100vh;
-    background-color: rgba(34, 39, 43, 0.8);
     overflow: hidden;
     position: relative;
 }
@@ -136,10 +189,8 @@
     }
 }
 
-#why-this-service {
-    padding: 20px 50px;
-    background-color: beige;
-}
+
+/* why this section */
 
 .text-box {
     margin: 20px;
@@ -153,12 +204,7 @@
 
 .text-box p {
     margin-top: 20px;
-    text-align: justify;
-}
-
-.why-this-service .button {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .button button {
@@ -180,29 +226,126 @@
 }
 
 @media (max-width:430px) {
-    #why-this-service {
-        padding: 30px 5px;
+
+    .text-box h3 {
+        font-size: 20px;
+    }
+
+    .text-box p {
+        font-size: 14px;
     }
 }
 
 /* Long info section */
 
+#long-info .subsection {
+    margin: 10px 0px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
 
+.long-info-container .leftBox {
+    background-image: url('../../servicesImages/longInfo/bg-img.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.long-info-container .leftBox .box {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 61, 61, 0.6);
+    border-radius: 10px;
+    color: white;
+}
+
+.long-info-container .leftBox h3,
+.subsection h3 {
+    font-weight: bold;
+    font-family: 'Georgia';
+    text-align: center;
+}
+
+.long-info-container .leftBox h5 {
+    text-align: center;
+}
+
+.long-info-container .leftBox p,
+.subsection p {
+    text-align: justify;
+}
+
+.long-info-container .rightBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.long-info-container .rightBox .subsection {
+    padding: 20px;
+}
+
+.subsection h3 {
+    color: #ee212c;
+}
+
+@media (max-width:321px) {
+
+    .long-info-container .leftBox h3,
+    .subsection h3 {
+        font-size: 20px;
+    }
+
+    .leftBox h5 {
+        font-size: 16px;
+    }
+
+    .long-info-container .leftBox p,
+    .subsection p {
+        font-size: 14px;
+    }
+
+    .long-info-container .leftBox ul,
+    .subsection ul {
+        font-size: 14px;
+    }
+
+}
 
 /* How we plan our reseach */
 
-#how-we-plan {
-    background-color: beige;
-}
 
-.how-we-plan .button {
-    display: flex;
-    justify-content: center;
-}
 
 /* How we articulate section */
+#articulate .leftBox img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+}
 
+#articulate .rightBox h2 {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#articulate p {
+    text-align: justify;
+}
+
+@media (max-width:450px) {
+    #articulate p {
+        font-size: 14px;
+    }
+
+}
 
 
 .articulate-container .leftBox img {
@@ -210,8 +353,35 @@
 }
 
 /* areas we cover css */
+
 .areas-container {
+    align-items: center;
+}
+
+.areas-container .leftBox h2 {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.areas-container .leftBox p {
+    text-align: center;
+}
+
+.areas-container .rightBox {
+    max-height: 720px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.areas-container .rightBox img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* our process*/

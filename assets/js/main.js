@@ -318,6 +318,22 @@
   });
 
 
+  //Swiper for client testimony of serivces page
+  var swiper = new Swiper(".clients-container .swiper", {
+    centeredSlides: true,
+    slidesPerView: "auto",
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      type: 'bullets'
+    }
+  });
+
   /**
    * Animation on scroll
    */

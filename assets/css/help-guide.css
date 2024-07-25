@@ -1,0 +1,592 @@
+:root {
+    --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+    --background-color: #ffffff;
+    /* Background color for the entire website, including individual sections */
+    --default-color: #444444;
+    /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #2a2c39;
+    /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #ef6603;
+    /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff;
+    /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff;
+    /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+    --nav-color: #ffffff;
+    /* The default color of the main navmenu links */
+    --nav-hover-color: #ef6603;
+    /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff;
+    /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff;
+    /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #060606;
+    /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #ef6603;
+    /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+    --background-color: #f9f9f9;
+    --surface-color: #ffffff;
+}
+
+.dark-background {
+    --background-color: #252524;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #404356;
+    --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+    scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    font-family: var(--default-font);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: color-mix(in srgb, var(--accent-color), transparent 25%);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f6b000;
+    font-family: var(--heading-font);
+}
+
+/* PHP Email Form Messages
+------------------------------*/
+.php-email-form .error-message {
+    display: none;
+    background: #df1529;
+    color: #ffffff;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.php-email-form .sent-message {
+    display: none;
+    color: #ffffff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.php-email-form .loading {
+    display: none;
+    background: var(--surface-color);
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid var(--accent-color);
+    border-top-color: var(--surface-color);
+    animation: php-email-form-loading 1s linear infinite;
+}
+
+@keyframes php-email-form-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* help-guide-hero section */
+
+.help-guide-hero .carousel-container h2,
+h3 {
+    color: #f6b000;
+}
+
+.help-guide-hero h3 {
+    color: white;
+}
+
+
+.help-guide-hero {
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+
+    background: url('../img/help-guide/bg4.jpeg');
+    background-position: center !important;
+    background-position-y: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+#help-guide-hero-carousel {
+    padding-top: 100px;
+    width: 100%;
+    height: 91%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.help-guide-hero .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    min-height: 75vh;
+    padding-top: 60px;
+}
+
+.help-guide-hero h2 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.help-guide-hero h2 span {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .help-guide-hero .carousel-container {
+        min-height: 90vh;
+    }
+
+    .help-guide-hero h2 {
+        font-size: 28px;
+    }
+}
+
+.help-guide-hero .help-guide-hero-waves {
+    display: block;
+    width: 100%;
+    height: 60px;
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.help-guide-hero-waves .wave1 use {
+    animation: move-forever1 10s linear infinite;
+    animation-delay: -2s;
+    fill: var(--default-color);
+    opacity: 0.6;
+}
+
+.help-guide-hero .wave2 use {
+    animation: move-forever2 8s linear infinite;
+    animation-delay: -2s;
+    fill: var(--default-color);
+    opacity: 0.4;
+}
+
+.help-guide-hero .wave3 use {
+    animation: move-forever3 6s linear infinite;
+    animation-delay: -2s;
+    fill: var(--default-color);
+}
+
+@keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@keyframes move-forever3 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+/* Features */
+#features {
+    background-color: #373737;
+}
+
+.searchi {
+    margin-top: 30px;
+}
+
+.searchi h3 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: bold;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.features-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.features-container ul {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.features-container .nav-item {
+    width: 310px;
+    margin: 10px;
+}
+
+.eng-img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.features .nav-link {
+    color: white;
+    display: flex;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+    transition: 0.3s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.features .nav-link h4 {
+    display: block !important;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    text-align: center;
+}
+
+.features .nav-link:hover {
+    color: black;
+    background-color: #cda235;
+}
+
+.features .nav-link.active {
+    background: #f6b000 !important;
+    color: black !important;
+}
+
+
+.features .tab-content {
+    width: 100%;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.sub-features {
+    background-color: #626262;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+}
+
+
+
+.sub-features-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+
+}
+
+.custom-card {
+    background: rgba(205, 205, 205);
+    border: 2px solid black;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    height: 70px;
+    width: 310px;
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.custom-card:hover{
+    background-color: rgb(203, 182, 17);
+}
+
+.card-link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.card-link:hover{
+    color: black;
+}
+
+
+/* widget */
+.widgets-container {
+    margin: 60px 0 30px 0;
+}
+
+.widget-title {
+    color: var(--heading-color);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 0 0 10px;
+    margin: 0 0 20px 0;
+    border-left: 4px solid var(--accent-color);
+}
+
+.widget-item {
+    margin-bottom: 30px;
+    background-color: color-mix(in srgb, var(--default-color), transparent 98%);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.widget-item:last-child {
+    margin-bottom: 0;
+}
+
+.blog-author-widget img {
+    max-width: 160px;
+}
+
+.blog-author-widget h4 {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 15px 0 0 0;
+    padding: 0;
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.blog-author-widget .social-links {
+    margin: 5px 0;
+}
+
+.blog-author-widget .social-links a {
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+    margin: 0 3px;
+    font-size: 18px;
+}
+
+.blog-author-widget .social-links a:hover {
+    color: var(--accent-color);
+}
+
+.blog-author-widget p {
+    font-style: italic;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin: 10px 0 0 0;
+}
+
+.search-widget form {
+    background: var(--background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+    padding: 3px 10px;
+    position: relative;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.search-widget form input[type=text] {
+    border: 0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: calc(100% - 40px);
+    background-color: var(--background-color);
+    color: var(--default-color);
+}
+
+.search-widget form input[type=text]:focus {
+    outline: none;
+}
+
+.search-widget form button {
+    background: none;
+    color: var(--default-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    font-size: 16px;
+    padding: 0 16px;
+    transition: 0.3s;
+    line-height: 0;
+}
+
+.search-widget form button i {
+    line-height: 0;
+}
+
+.search-widget form button:hover {
+    color: var(--accent-color);
+}
+
+.search-widget form:is(:focus-within) {
+    border-color: var(--accent-color);
+}
+
+.categories-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories-widget ul li {
+    padding-bottom: 10px;
+}
+
+.categories-widget ul li:last-child {
+    padding-bottom: 0;
+}
+
+.categories-widget ul a {
+    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    transition: 0.3s;
+}
+
+.categories-widget ul a:hover {
+    color: var(--accent-color);
+}
+
+.categories-widget ul a span {
+    padding-left: 5px;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    font-size: 14px;
+}
+
+.recent-posts-widget .post-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.recent-posts-widget .post-item:last-child {
+    margin-bottom: 0;
+}
+
+.recent-posts-widget .post-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.recent-posts-widget .post-item h4 a {
+    color: var(--default-color);
+    transition: 0.3s;
+}
+
+.recent-posts-widget .post-item h4 a:hover {
+    color: var(--accent-color);
+}
+
+.recent-posts-widget .post-item time {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 50%);
+}
+
+.tags-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tags-widget ul li {
+    display: inline-block;
+}
+
+.tags-widget ul a {
+    background-color: color-mix(in srgb, var(--default-color), transparent 94%);
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 5px 15px;
+    margin: 0 6px 8px 0;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.tags-widget ul a:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+}
+
+.tags-widget ul a span {
+    padding-left: 5px;
+    color: color-mix(in srgb, var(--default-color), transparent 60%);
+    font-size: 14px;
+}

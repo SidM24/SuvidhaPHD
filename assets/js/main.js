@@ -317,6 +317,8 @@
     }
   });
 
+ 
+
 
   //Swiper for client testimony of serivces page
   var swiper = new Swiper(".clients-container .swiper", {

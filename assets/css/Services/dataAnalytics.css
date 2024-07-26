@@ -1,0 +1,32 @@
+#process-step {
+    background-color: #121212;
+}
+
+.process-step {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.process-step .step {
+
+    width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 10px;
+
+    box-shadow:inset 5px 5px 20px rgba(255, 255, 255, 0.7);
+}
+
+.step h4 {
+    text-align: center;
+    font-weight: bold;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.step p {
+    text-align: center;
+}

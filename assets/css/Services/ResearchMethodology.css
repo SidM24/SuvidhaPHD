@@ -1,0 +1,23 @@
+thead {
+    text-align: center;
+    font-weight: bold;
+}
+
+th,
+td {
+    border: 1px solid #aaaaaa;
+    padding: 10px;
+    text-align: left;
+    width: 50%;
+}
+tr{
+    padding: 5px 10px;
+}
+
+th {
+    background-color: #e3e3e3;
+}
+
+td {
+    background-color: #efefef;
+}

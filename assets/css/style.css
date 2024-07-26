@@ -186,6 +186,13 @@ h6 {
   z-index: 997;
   height: 75px;
   top: 60px;
+  width: 100%;
+}
+
+#header .container{
+  margin: auto;
+  padding: 0px;
+  width: 100%;
 }
 
 #header.header-scrolled {
@@ -324,6 +331,13 @@ h6 {
   position: relative;
   white-space: nowrap;
   padding: 10px 0 10px 24px;
+}
+
+@media (max-width:1050px) and (min-width:991px) {
+  .navbar>ul>li {
+    padding: 10px 0 10px 8px;
+  }
+  
 }
 
 .navbar a,
